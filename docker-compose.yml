@@ -1,0 +1,23 @@
+# SyncSpace — local PostgreSQL for development
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: syncspace-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${SYNCSPACE_DB_USER:-syncspace}
+      POSTGRES_PASSWORD: ${SYNCSPACE_DB_PASSWORD:-syncspace_dev}
+      POSTGRES_DB: ${SYNCSPACE_DB_NAME:-syncspace}
+    ports:
+      # Use 5433 on the host by default so we do not clash with a local PostgreSQL on 5432
+      - "${SYNCSPACE_DB_PORT:-5433}:5432"
+    volumes:
+      - syncspace_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${SYNCSPACE_DB_USER:-syncspace} -d ${SYNCSPACE_DB_NAME:-syncspace}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  syncspace_pgdata:
