@@ -37,3 +37,6 @@ coverage/
 # Misc
 *.tsbuildinfo
 next-env.d.ts
+
+# Personal notes (not for version control)
+Demo.txt
