@@ -7,10 +7,6 @@
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
 ![License](https://img.shields.io/badge/license-MIT-green?style=flat)
 
-**Tagline:** *One shared space where teams stay perfectly in sync.*
-
-> **Deployment note:** Vercel (or another host) deployment guide — *coming soon*. This repo is optimized for **local development** first (Docker Postgres + Express API + Next.js). No AWS or cloud wiring is included in this phase.
-
 ---
 
 ## 💡 Why the name “SyncSpace”?
@@ -298,10 +294,5 @@ Please keep changes focused and match existing code style.
 
 Licensed under the **MIT License** — see [LICENSE](LICENSE) for the full text.
 
-Copyright (c) 2024 Vidhi Patel.
 
 ---
-
-Built with ❤️ by **Vidhi Patel** · Powered by **Next.js**, **Express**, **PostgreSQL**, and **Prisma**.
-
-© 2024 SyncSpace
